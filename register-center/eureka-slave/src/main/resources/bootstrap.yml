@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: eureka-slave
+  security:
+    user:
+      name: tk
+      password: tk-123456
+server:
+  port: 8762
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

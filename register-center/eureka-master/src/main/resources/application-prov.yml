@@ -1,0 +1,6 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://tk:tk-123456@182.61.49.195:8862/eureka
+    fetch-registry: false
+    register-with-eureka: false

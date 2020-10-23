@@ -1,0 +1,13 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://tk:tk-123456@master:8761/eureka
+    fetch-registry: false #集群方式
+    register-with-eureka: false #集群方式
+  instance:
+    hostname: slave
+    prefer-ip-address: true #显示IP
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
+  server:
+    enable-self-preservation: true #关闭自我保护
+    eviction-interval-timer-in-ms: 10000 #清理间隔10s
