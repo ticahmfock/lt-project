@@ -7,6 +7,12 @@ spring:
       password: tk-123456
 server:
   port: 8886
+  undertow:
+      threads:
+        io: 16
+        worker: 256
+      buffer-size: 1024
+      direct-buffers: true
 management:
   endpoints:
     web:

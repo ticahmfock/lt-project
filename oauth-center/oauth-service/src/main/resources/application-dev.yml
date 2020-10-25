@@ -1,9 +1,8 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://tk:tk-123456@master:8761/eureka
-    registry-fetch-interval-seconds: 10
-    instance-info-replication-interval-seconds: 10
+      defaultZone: http://tk:tk-123456@master:8761/eureka,http://tk:tk-123456@slave:8762/eureka
   instance:
-    prefer-ip-address: true #显示IP
+    hostname: localhost
+    prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
