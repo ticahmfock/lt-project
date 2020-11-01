@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://tk:tk-123456@master:8761/eureka,http://tk:tk-123456@slave:8762/eureka
+      defaultZone: http://tk:tk-123456@master:8761/eureka
   instance:
     hostname: localhost
     prefer-ip-address: true
